@@ -1,3 +1,5 @@
+package exerciciosJava;
+
 import java.util.Scanner;
 
 public class Calculadora {
@@ -65,8 +67,22 @@ public class Calculadora {
             case 1:
                 System.out.println("Somar " + n1 + " + " + n2 + "?");
                 resposta = ler.nextLine();
-
-
+                if(resposta == "sim"){
+                    soma(n1, n2);
+                    System.out.println("Deseja mais alguma coisa?");
+                    resposta2 = ler.nextLine();
+                } else {
+                    System.out.println("Deseja voltar ao inicio?");
+                }
+            case 2:
+                System.out.println("Subtrair" + n1 + " - " + n2 + "?");
+                resposta = ler.nextLine();
+                if(resposta == "sim"){
+                    sub(n1,n2);
+                    System.out.println("Deseja mais alguma coisa?");
+                } else {
+                    System.out.println("Deseja voltar ao inicio?");
+                }
             default:
                 System.out.println("fechando a calculadora..");
                 break;
